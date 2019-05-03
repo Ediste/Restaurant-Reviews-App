@@ -167,6 +167,7 @@ createReviewHTML = (review) => {
   
   const text = document.createElement('div');
   text.className = 'review-text';
+  text.setAttribute('aria-label', 'review text');
   li.appendChild(text);
 
   const rating = document.createElement('p');
