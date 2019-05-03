@@ -75,7 +75,8 @@ initMap = () => {
   self.newMap = L.map('map', {
         center: [40.722216, -73.987501],
         zoom: 12,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        keyboard: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiZWRpc3RlOTMiLCJhIjoiY2p2MTl3dWR3MXM5bDRkbGpmNHF0M2cwdyJ9.T82RgJKQkrWIWk4VuxTh3A',
@@ -85,6 +86,11 @@ initMap = () => {
       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.streets'
   }).addTo(newMap);
+
+  // Remove focus for map actions
+  document.querySelectorAll('.leaflet-container a').forEach(function(actionLink) { 
+    actionLink.tabIndex = -1; 
+  });
 
   updateRestaurants();
 }
