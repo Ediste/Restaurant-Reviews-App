@@ -103,6 +103,7 @@ nav h1 a {
     font-size: 17px;
     margin: 0;
     width: 100%;
+    text-align: left;
 }
 
 /* Display list items side by side */
@@ -222,7 +223,7 @@ nav h1 a {
   max-height: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #B85D00;
   font-family: Arial,sans-serif;
   font-size: 14pt;

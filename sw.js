@@ -1,4 +1,4 @@
-let staticCacheName = 'restaurant-app-v1';
+const staticCacheName = 'restaurant-app-v1';
 
 /**
  * Installation of the service worker
